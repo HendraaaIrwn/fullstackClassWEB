@@ -7,6 +7,7 @@ Landing page set for Devscale (home hero and dedicated Program page) built with 
 - `program.html` – halaman Program dengan kartu jalur belajar dan highlight support.
 - `mentor.html` – halaman Mentor dengan showcase mentor & jadwal mentoring.
 - `resource.html` – halaman Resources berisi toolkit, starter kit, dan newsletter.
+- `pricing.html` – halaman Pricing dengan paket Starter, Pro, dan Team.
 - `dist/global.css` – output Tailwind (dibangun dari `src/input.css`).
 
 ## Menjalankan secara lokal
