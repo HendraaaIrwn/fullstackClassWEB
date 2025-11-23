@@ -9,6 +9,7 @@ Landing page set for Devscale (home hero and dedicated Program page) built with 
 - `resource.html` – halaman Resources berisi toolkit, starter kit, dan newsletter.
 - `pricing.html` – halaman Pricing dengan paket Starter, Pro, dan Team.
 - `community.html` – halaman Community untuk event, challenge, dan networking.
+- `masuk.html` – halaman login Devscale.
 - `dist/global.css` – output Tailwind (dibangun dari `src/input.css`).
 
 ## Menjalankan secara lokal
@@ -25,8 +26,14 @@ Landing page set for Devscale (home hero and dedicated Program page) built with 
    ```bash
    bun run tw
    ```
-4. Buka `index.html` atau `program.html` di browser (open file atau serve statis pilihanmu).
+4. Buka `index.html` atau halaman lainnya di browser (open file atau serve statis pilihanmu).
+5. Backend demo login:
+   ```bash
+   bun run server.js
+   ```
+   Endpoint: `POST http://localhost:3000/api/login` (dipakai oleh `masuk.html`).
 
 ## Tech stack
 - Tailwind CSS v4 (CLI)
 - Bun (package manager & runner)
+- Node HTTP (backend demo login, berjalan via Bun)
