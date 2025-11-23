@@ -1,0 +1,17 @@
+{
+  "name": "tailwindcss",
+  "module": "main.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "tw": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/global.css --watch",
+    "dev": "concurrently \"bun run tw\" \"bun run index.html\""
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
