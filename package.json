@@ -1,17 +1,31 @@
 {
-  "name": "tailwindcss",
-  "module": "main.js",
-  "type": "module",
-  "private": true,
+  "name": "fullstackclassweb",
+  "version": "1.0.0",
+  "description": "A full stack web application with TypeScript support",
+  "main": "index.js",
   "scripts": {
-    "tw": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/global.css --watch",
-    "dev": "concurrently \"bun run tw\" \"bun run index.html\""
+    "dev": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:js": "tsc --watch",
+    "build:js": "tsc"
   },
+  "keywords": [
+    "fullstack",
+    "web",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "concurrently": "^9.2.1"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "typescript": "^5.7.3",
+    "@types/node": "^20.13.0"
   }
 }
